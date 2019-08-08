@@ -67,3 +67,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/crenshaw_dev/v16/.suo
