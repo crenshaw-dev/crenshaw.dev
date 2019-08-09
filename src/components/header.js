@@ -6,14 +6,15 @@ import Logo from "./logo";
 const Header = ({ siteTitle }) => (
   <header
     style={{
+      backgroundColor: `#222`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: `61.8vw`,
+        paddingTop: `1em`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -25,7 +26,6 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <Logo />
-          {siteTitle}
         </Link>
       </h1>
     </div>
