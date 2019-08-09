@@ -35,7 +35,7 @@ Without resource hints, my page's HTML must be parsed before the stylesheet can 
 (In this example, I've moved the stylesheet link below a massive block of "lorem ipsum" text, to simulate a late-
 discovered stylesheet and make the waterfall chart easier to read.)
 
-![WebPageTest waterfall chart showing no connection to the external domain until HTML is completely downloaded and parsed](https://crenshaw.dev/images/preconnect/webpagetest-no-hint.png)
+![WebPageTest waterfall chart showing no connection to the external domain until HTML is completely downloaded and parsed](./preconnect/webpagetest-no-hint.png)
 
 In the [above WebPageTest](https://www.webpagetest.org/result/190405_9X_f73fed28b47e2b1bdccc2d1810ed9e13/) waterfall 
 chart, the page is completely downloaded and parsed before Chrome connects to mac9416.com to download the stylesheet.
@@ -54,7 +54,7 @@ greater performance boost.)
 ```
 
 ![WebPageTest waterfall chart showing one connection to the external domain starting immediately after the first chunk 
-of HTML is parsed, but the other one being delayed](https://crenshaw.dev/images/preconnect/webpagetest-crossorigin-hint.png)
+of HTML is parsed, but the other one being delayed](./preconnect/webpagetest-crossorigin-hint.png)
 
 With a `preconnect` hint in place, [the waterfall](https://www.webpagetest.org/result/190405_G4_32fdd03fe7166cd5599500dd67b297ca/) 
 looks better. A DNS lookup for mac9416.com happens immediately after 
@@ -76,7 +76,7 @@ attribute.
 ```
 
 ![WebPageTest waterfall chart showing one connection to the external domain starting immediately after the first chunk 
-of HTML is parsed, but the other one beind delayed](https://crenshaw.dev/images/preconnect/webpagetest-no-crossorigin-hint.png)
+of HTML is parsed, but the other one beind delayed](./preconnect/webpagetest-no-crossorigin-hint.png)
 
 In [this waterfall chart](https://www.webpagetest.org/result/190405_N3_83bb01386330b6d7fc30fac43b3b6a85/), we seem to 
 have the same problem, but with the connections swapped. The connection used to 
@@ -114,7 +114,7 @@ So let's use two preconnect hints, one for non-CORS requests, and the other for 
 </head>
 ```
 
-![WebPageTest waterfall chart showing two connections to mac9416.com starting immediately after the first chunk of HTML is parsed](https://crenshaw.dev/images/preconnect/webpagetest-both-hints.png)
+![WebPageTest waterfall chart showing two connections to mac9416.com starting immediately after the first chunk of HTML is parsed](./preconnect/webpagetest-both-hints.png)
 
 This waterfall chart looks much better. With two resource hints in place, both connections to mac9416.com are 
 established immediately after the first chunk of HTML is parsed. Incidentally, we've achieved the fastest time to 
