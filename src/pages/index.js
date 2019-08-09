@@ -55,7 +55,12 @@ export const query = graphql`
 `
 
 export default IndexPage
+
+/**
+ * Convert date strings to actual dates and compare them.
+ * @param {string} a Left-side date string.
+ * @param {string} b Right-side date string.
+ */
 function dateStringComparer(a, b) {
   return new Date(a) > new Date(b) ? -1 : 1;
 }
-

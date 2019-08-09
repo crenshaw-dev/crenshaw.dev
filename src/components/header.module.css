@@ -1,0 +1,29 @@
+.navlist {
+    font-family: sans-serif;
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0.5rem;
+}
+
+.navlink {
+    display: inline;
+    font-size: 1.2em;
+}
+
+.navlink:not(:first-child) {
+    padding-left: 1em;
+}
+
+.navlink:not(:last-child) {
+    border-right: #ddd solid 2px;
+    padding-right: calc(1em + 2px);
+}
+
+.navlink a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.navlink a:hover {
+    text-decoration: underline;
+}

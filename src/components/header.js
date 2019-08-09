@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo";
 
+import styles from "./header.module.css"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -28,6 +30,12 @@ const Header = ({ siteTitle }) => (
           <Logo />
         </Link>
       </h1>
+      <nav>
+        <ul className={styles.navlist}>
+          <li className={styles.navlink}><Link to="">Blog</Link></li>
+          <li className={styles.navlink}><Link to="contact">Contact</Link></li>
+        </ul>
+      </nav>
     </div>
   </header>
 )
