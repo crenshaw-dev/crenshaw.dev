@@ -1,0 +1,23 @@
+.contact-form {
+    input, textarea, button {
+        border: gray solid 2px;
+        min-width: 20rem;
+    
+        &:focus {
+            border-color: rgb(71, 118, 187);
+        }
+    }
+
+    button {
+        background-color: lightgray;
+        cursor: pointer;
+
+        &:hover {
+            border-color: rgb(71, 118, 187);
+        }
+    }
+
+    div {
+        margin-bottom: 0.5rem;
+    }
+}
