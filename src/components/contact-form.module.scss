@@ -1,10 +1,12 @@
+@import "../styles/base.scss";
+
 .contact-form {
     input, textarea, button {
         border: gray solid 2px;
         min-width: 20rem;
     
         &:focus {
-            border-color: rgb(71, 118, 187);
+            border-color: $blue;
         }
     }
 
@@ -13,7 +15,7 @@
         cursor: pointer;
 
         &:hover {
-            border-color: rgb(71, 118, 187);
+            border-color: $blue;
         }
     }
 

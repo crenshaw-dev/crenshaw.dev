@@ -34,6 +34,7 @@ const Header = ({ siteTitle }) => (
         <ul className={styles.navlist}>
           <li className={styles.navlink}><Link to="">Blog</Link></li>
           <li className={styles.navlink}><Link to="contact">Contact</Link></li>
+          <li className={styles.navlink}><Link to="hire">Hire</Link></li>
         </ul>
       </nav>
     </div>
