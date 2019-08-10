@@ -1,0 +1,34 @@
+@import "../../styles/base.scss";
+
+.icon {
+    fill: $foreground;
+
+    &:hover {
+        .background-color {
+            fill: #fff;
+            stroke: #fff;
+        }
+
+        .github-color { 
+            fill: #1B1817; 
+        }
+
+        .linkedin-color {
+            stroke: #0077b5;
+            fill: #0077b5;
+        }
+
+        .stackoverflow-color {
+            fill: #f58025;
+        }
+
+        .twitter-color {
+            fill: #1da1f3;
+        }
+    }
+}
+
+.background-color {
+    fill: $background;
+    stroke: $background;
+}

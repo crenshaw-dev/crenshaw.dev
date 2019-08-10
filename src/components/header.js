@@ -16,13 +16,7 @@ const Header = () => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: `61.8vw`,
-        paddingTop: `1em`,
-      }}
-    >
+    <div className={styles.mainWrapper}>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"

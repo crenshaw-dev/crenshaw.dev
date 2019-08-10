@@ -1,5 +1,18 @@
+@import "./layout.module.scss";
+
+.main-wrapper {
+    @include mainWrapper();
+}
+
 .nav {
     display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+
+    @media screen and (min-width: 480px) {
+        font-size: 1rem;
+    }
 
     ul {
         display: flex;
@@ -13,6 +26,11 @@
             align-self: flex-start;
             flex-grow: 1;
             margin: auto 0;
+            order: 1;
+
+            @media screen and (min-width: 480px) {
+                order: 0;
+            }
 
             li {
                 &:not(:first-child) {
@@ -27,7 +45,12 @@
         }
 
         &:not(:first-child) {
-            margin: 0;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+
+            @media screen and (min-width: 480px) {
+                margin-top: 0;
+            }
         }
 
         li {
@@ -44,8 +67,13 @@
 
             svg {
                 height: 2.5rem;
-                margin-left: 0.5rem;
                 width: auto;
+            }
+        }
+
+        li:not(:first-child) {
+            svg {
+                margin-left: 0.5rem;
             }
         }
     }

@@ -1,0 +1,14 @@
+@mixin mainWrapper {
+    margin: 0 auto;
+    max-width: 90vw;
+    padding-top: 1rem;
+
+    @media screen and (min-width: 480px) {
+        // Golden ratio.
+        max-width: 61.8vw;
+    }
+}
+
+.main-wrapper {
+    @include mainWrapper();
+}
