@@ -18,6 +18,10 @@
             fill: #0077b5;
         }
 
+        .pluralsight-color {
+            fill: url(#pluralsight-gradient);
+        }
+
         .stackoverflow-color {
             fill: #f58025;
         }
@@ -26,6 +30,11 @@
             fill: #1da1f3;
         }
     }
+}
+
+.foreground-color {
+    fill: $foreground;
+    stroke: $foreground;
 }
 
 .background-color {

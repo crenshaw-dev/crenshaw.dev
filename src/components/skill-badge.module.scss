@@ -1,0 +1,26 @@
+@import "../styles/base.scss";
+
+$height: 1.6rem;
+
+.skill-badge {
+    background: $foreground;
+    color: $background;
+    display: flex;
+    height: $height;
+    flex-shrink: 1;
+    padding-right: 0.5rem;
+}
+
+.badge-icon {
+    width: $height;
+
+    svg {
+        height: $height - 0.1rem;
+        margin: auto;
+        vertical-align: middle;
+    }
+} 
+
+.badge-caption a {
+    color: $background;
+}
