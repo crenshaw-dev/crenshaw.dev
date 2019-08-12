@@ -1,5 +1,6 @@
 import React from "react"
 
+// @ts-ignore
 import styles from "./icons.module.scss"
 
 const LinkedInIcon = () => 

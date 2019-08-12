@@ -3,11 +3,13 @@ import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo";
 
-import styles from "./header.module.scss"
 import LinkedInIcon from "./icons/linkedin";
 import TwitterIcon from "./icons/twitter";
 import GithubIcon from "./icons/github";
 import StackOverflowIcon from "./icons/stackoverflow";
+
+// @ts-ignore
+import styles from "./header.module.scss"
 
 const Header = () => (
   <header

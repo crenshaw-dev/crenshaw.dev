@@ -1,8 +1,9 @@
 import React from "react"
 
+// @ts-ignore
 import styles from "./skill-badge.module.scss"
 
-const SkillBadge = (props) =>
+const SkillBadge = (props: {href?: string; title?: string; icon: React.ReactNode; children: React.ReactNode}) =>
   <a className={styles.skillBadge} href={props.href} title={props.title}>
     <span className={styles.badgeIcon}>
       {props.icon}

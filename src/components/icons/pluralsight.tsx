@@ -1,5 +1,6 @@
 import React from "react"
 
+// @ts-ignore
 import styles from "./icons.module.scss"
 
 const PluralsightIcon = () => 
@@ -8,7 +9,7 @@ const PluralsightIcon = () =>
     aria-label="Pluralsight" 
     role="img"
     viewBox="0 0 512 512"
-    className={styles.icon}>
+    className={styles.icon}
   >
     <defs>
       <linearGradient id="pluralsight-gradient" x2="0" y2="1">

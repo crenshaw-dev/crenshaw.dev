@@ -4,32 +4,45 @@ import SkillBadgeStackoverflow from "./skill-badge-stackoverflow";
 import SkillBadgeLinkedIn from "./skill-badge-linkedin";
 import SkillBadgePluralsight from "./skill-badge-pluralsight";
 
+// @ts-ignore
 import styles from "./skills.module.scss"
 
-function getStackOverflowAnswerScores() {
-  return fetch('https://api.stackexchange.com/2.2/users/684776/top-answer-tags?site=stackoverflow')
-    .then((response) => {
-      return response.json()
-    })
-    .then((json) => {
-      const tags = json.items.reduce((acc, item) => {
-        acc[item.tag_name] = item.answer_score
-        return acc
-      }, {})
+interface AnswerTagItem {
+  // eslint-disable-next-line @typescript-eslint/camelcase
+  [tag_name: string]: number;
+}
 
-      return tags
-    })
+interface AnswerTagsResponse {
+  items: AnswerTagItem[];
+}
+
+async function getStackOverflowAnswerScores() {
+  const response = await fetch('https://api.stackexchange.com/2.2/users/684776/top-answer-tags?site=stackoverflow');
+  const json = await response.json() as AnswerTagsResponse;
+
+  const tags = json.items.reduce((acc: {[tagName: string]: number}, item) => {
+    acc[item.tag_name] = item.answer_score;
+    return acc;
+  }, {});
+
+  return tags;
 }
 
 class Skills extends React.Component {
-  constructor(props) {
+  public state: {
+    stackoverflowscores: {
+      [skillname: string]: number;
+    };
+  }
+
+  public constructor(props: undefined) {
     super(props)
     this.state = {
       stackoverflowscores: {}
     }
   }
 
-  render() {
+  public render() {
     return <>
       <h3>Skills</h3>
       <ul>
@@ -121,7 +134,7 @@ class Skills extends React.Component {
     </>
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     getStackOverflowAnswerScores().then((tags) => {
       this.setState({stackoverflowscores: tags})
     })
